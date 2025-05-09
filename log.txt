@@ -1,0 +1,384 @@
+WARNING 04-28 16:43:20 config.py:406] Casting torch.bfloat16 to torch.float16.
+INFO 04-28 16:43:20 llm_engine.py:73] Initializing an LLM engine with config: model='/scratch/user/rheasudheer19/hybrid_selfrag/models/selfrag_llama2_7b', tokenizer='/scratch/user/rheasudheer19/hybrid_selfrag/models/selfrag_llama2_7b', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=2048, download_dir='/scratch/user/rheasudheer19/hybrid_selfrag/model_cache', load_format=auto, tensor_parallel_size=1, quantization=None, seed=0)
+INFO 04-28 16:43:20 tokenizer.py:32] For some LLaMA V1 models, initializing the fast tokenizer may take a long time. To reduce the initialization time, consider using 'hf-internal-testing/llama-tokenizer' instead of the original tokenizer.
+INFO 04-28 16:45:47 llm_engine.py:222] # GPU blocks: 12, # CPU blocks: 512
+Loading queries from: data/triviaqa_sample.json
+
+[1] Query: Explain the major scientific discoveries made by the Hubble Space Telescope.
+Initial Response:
+The Hubble Space Telescope has made many important discoveries.
+
+The Hubble Space Telescope has made many important discoveries.
+
+The Hubble Space Telescope has made many important discoveries.The Hubble Space Telescope has made many important discoveries, including the discovery of dark energy, the expansion of the universe, and the discovery of exoplanets.
+Initial Fact Scores: {'Wikipedia': 0.65, 'ArXiv': 0.61}
+All fact scores are good. No retrieval needed.
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[2] Query: Describe the events leading up to the signing of the Declaration of Independence.
+Initial Response:
+The Declaration of Independence was signed on July 4, 1776, by 56 delegates from 13 colonies.
+Initial Fact Scores: {'Wikipedia': 0.81, 'ArXiv': 0.09}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:46:25 scheduler.py:161] Input prompt (372 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[3] Query: List the largest moons of Saturn and explain their geological features.
+Initial Response:
+The largest moon of Saturn is Titan.Titan is the only moon of Saturn with a dense atmosphere.
+Initial Fact Scores: {'Wikipedia': 0.85, 'ArXiv': 0.64}
+All fact scores are good. No retrieval needed.
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[4] Query: What is the significance of the CRISPR-Cas9 technology in genetic engineering?
+Initial Response:
+The CRISPR-Cas9 technology is a revolutionary genetic engineering tool that allows precise manipulation of genetic material.
+Initial Fact Scores: {'Wikipedia': 0.64, 'ArXiv': 0.21}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:46:35 scheduler.py:161] Input prompt (501 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[5] Query: Summarize the main causes and effects of climate change on global ecosystems.
+Initial Response:
+The main causes and effects of climate change on global ecosystems.
+Initial Fact Scores: {'Wikipedia': 0.7, 'ArXiv': 0.59}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:46:42 scheduler.py:161] Input prompt (354 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[6] Query: Describe the process of photosynthesis and its role in the ecosystem.
+Initial Response:
+Photosynthesis is the process by which plants convert light energy into chemical energy.This chemical energy is stored in the plant tissue and can be used by animals and humans.This process is essential for the survival of all life on Earth.
+Initial Fact Scores: {'Wikipedia': 0.37, 'ArXiv': 0.37}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:46:54 scheduler.py:161] Input prompt (593 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[7] Query: What contributions did Isaac Newton make to physics?
+Initial Response:
+
+Initial Fact Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:46:55 scheduler.py:161] Input prompt (229 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[8] Query: Summarize the discoveries made by the James Webb Space Telescope so far.
+Initial Response:
+
+Initial Fact Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:46:56 scheduler.py:161] Input prompt (590 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[9] Query: Explain the greenhouse effect and its role in global warming.
+Initial Response:
+The greenhouse effect is a process by which the atmosphere traps heat, leading to an increase in global temperature.This process is a major contributor to global warming.
+Initial Fact Scores: {'Wikipedia': 0.71, 'ArXiv': 0.3}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:47:03 scheduler.py:161] Input prompt (529 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[10] Query: What are the major layers of the Earth’s atmosphere?
+Initial Response:
+The major layers of the Earth's atmosphere are the troposphere, stratosphere, mesosphere, and thermosphere.The troposphere is the layer closest to the Earth's surface, followed by the stratosphere, mesosphere, and thermosphere.
+Initial Fact Scores: {'Wikipedia': 0.49, 'ArXiv': 0.44}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:47:13 scheduler.py:161] Input prompt (311 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[11] Query: Describe how vaccines work to protect the human body.
+Initial Response:
+Vaccines work by introducing a weakened or inactivated form of a pathogen into the body.
+
+Vaccines work by introducing a weakened or inactivated form of a pathogen into the body.This allows the body's immune system to recognize the pathogen and create antibodies to protect against it.This process helps to protect the body from future infection.
+Initial Fact Scores: {'Wikipedia': 0.56, 'ArXiv': 0.4}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:47:24 scheduler.py:161] Input prompt (451 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[12] Query: List the major battles of the American Civil War and their outcomes.
+Initial Response:
+The Battle of Gettysburg was a major battle of the American Civil War.
+The Battle of Gettysburg was a major battle of the American Civil War.
+The Battle of Gettysburg was a major battle of the American Civil War.
+The Battle of Gettysburg was a major battle of the American Civil War.
+The Battle of Gettysburg was a major battle of the American Civil War.
+The Battle of Gettysburg was a major battle of the American Civil War.
+The Battle of Gettysburg was a major battle of theThe Battle of Gettysburg (1863) - A Union victory.
+Initial Fact Scores: {'Wikipedia': 0.78, 'ArXiv': 0.41}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:47:41 scheduler.py:161] Input prompt (363 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[13] Query: Explain the structure and function of DNA.
+WARNING 04-28 16:47:46 scheduler.py:161] Input prompt (193 tokens) is too long and exceeds the capacity of block_manager
+Initial Response:
+DNA (deoxyribonucleic acid) is the molecule that carries the genetic instructions used in the growth, development, functioning, and reproduction of all living organisms.DNA is the carrier of genetic information and is composed of two strands that form a double helix.The two strands are connected by pairs of chemical building blocks called nucleotides.Each nucleotide is composed of a phosphate group, a sugar molecule, and a nitrogenous base.The two strands of DNA are held together by pairs of chemical bonds, forming a double helix structure.The two strands of DNA are connected by pairs of chemical building blocks called nucleotides.Each nucle
+Initial Fact Scores: {'Wikipedia': 0.7, 'ArXiv': 0.41}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:48:09 scheduler.py:161] Input prompt (464 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[14] Query: Describe the historical significance of the Magna Carta.
+WARNING 04-28 16:48:14 scheduler.py:161] Input prompt (193 tokens) is too long and exceeds the capacity of block_manager
+Initial Response:
+The Magna Carta, 1215
+The Magna Carta, 1215
+The Magna Carta, 1215
+The Magna Carta, 1215
+The Magna Carta, 1215
+The Magna Carta, 1215
+The Magna Carta, 1215
+The Magna Carta, 1215
+The Magna Carta, 1215
+The Magna Carta, 1215
+The Magna Carta, 1215
+The Magna Carta, 1215
+The Magna Carta, 1215
+The Magna Carta
+Initial Fact Scores: {'Wikipedia': 0.0, 'ArXiv': 0.02}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:48:21 scheduler.py:161] Input prompt (532 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[15] Query: Summarize Albert Einstein’s contributions to modern physics.
+Initial Response:
+Albert Einstein
+
+Albert Einstein's contributions to modern physics include the theory of relativity, quantum theory, statistical mechanics, and the photoelectric effect.
+Initial Fact Scores: {'Wikipedia': 0.62, 'ArXiv': 0.63}
+All fact scores are good. No retrieval needed.
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[16] Query: List the planets of the Solar System in order from the sun.
+Initial Response:
+The planets of the Solar System in order from the sun are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.
+Initial Fact Scores: {'Wikipedia': 0.46, 'ArXiv': 0.39}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:48:34 scheduler.py:161] Input prompt (529 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[17] Query: Explain the water cycle and its importance to Earth’s climate.
+Initial Response:
+The water cycle is the continuous movement of water from the Earth's surface through the atmosphere by evaporation, then to the land through precipitation and back to the surface through runoff.The water cycle is important to Earth's climate as it helps regulate the Earth's temperature and humidity.
+Initial Fact Scores: {'Wikipedia': 0.55, 'ArXiv': 0.51}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:48:51 scheduler.py:161] Input prompt (551 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[18] Query: What are black holes and how are they formed?
+Initial Response:
+Black holes are regions of space where gravity is so strong that even light cannot escape from them.They are formed when a large star dies and collapses in upon itself.
+Initial Fact Scores: {'Wikipedia': 0.61, 'ArXiv': 0.52}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:49:06 scheduler.py:161] Input prompt (289 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[19] Query: Describe the differences between renewable and non-renewable energy sources.
+Initial Response:
+Renewable energy is energy derived from natural resources that are replenished at a rate that is faster than the rate of consumption.Renewable energy sources are those that can be replenished or replaced over time, such as solar, wind, geothermal, and hydroelectric power.
+Initial Fact Scores: {'Wikipedia': 0.59, 'ArXiv': 0.5}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 16:49:16 scheduler.py:161] Input prompt (479 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[20] Query: Explain the basic structure and purpose of the United Nations.
+Initial Response:
+The United Nations is an international organization whose stated aims are facilitating cooperation in political, economic, and social areas among nations.The United Nations is an international organization composed of 193 member states that work together to promote international cooperation and to solve global problems.
+Initial Fact Scores: {'Wikipedia': 0.58, 'ArXiv': 0.31}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:05:27 scheduler.py:161] Input prompt (422 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[21] Query: Explain how the Hubble Space Telescope discovered planets outside the Milky Way.
+Initial Response:
+
+Initial Fact Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:05:29 scheduler.py:161] Input prompt (413 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[22] Query: Describe the secret meetings that finalized the U.S. Constitution in 1775.
+Initial Response:
+The secret meetings that finalized the U.S. Constitution in 1775 were held in Philadelphia, Pennsylvania.The delegates to these meetings were chosen by the 13 colonies and included representatives from Virginia, Pennsylvania, Massachusetts, New York, South Carolina, and Georgia.The meetings were held in secret to avoid detection by the British government, which had imposed restrictions on the colonies.The delegates worked tirelessly to draft a document that would serve as the foundation of the United States of America.
+Initial Fact Scores: {'Wikipedia': 0.3, 'ArXiv': 0.09}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:05:56 scheduler.py:161] Input prompt (526 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[23] Query: List the moons of Saturn that show signs of intelligent life.
+Initial Response:
+The Cassini spacecraft has discovered evidence of liquid water on Saturn's moon Enceladus.
+Enceladus is the only known moon of Saturn that shows signs of intelligent life.
+Initial Fact Scores: {'Wikipedia': 0.38, 'ArXiv': 0.63}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:06:03 scheduler.py:161] Input prompt (337 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[24] Query: Explain how CRISPR was first used on extinct dinosaurs.
+Initial Response:
+Can you please rephrase the question?
+Initial Fact Scores: {'Wikipedia': 0.0, 'ArXiv': 0.13}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:06:05 scheduler.py:161] Input prompt (394 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[25] Query: Summarize the efforts to reverse climate change during the Roman Empire.
+Initial Response:
+The Roman Empire was one of the largest and most powerful empires in history.However, there is limited information available on the efforts made by the Roman Empire to reverse climate change.Therefore, it is not possible to provide a summary of the efforts made by the Roman Empire to reverse climate change.
+Initial Fact Scores: {'Wikipedia': 0.36, 'ArXiv': 0.28}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:06:21 scheduler.py:161] Input prompt (316 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[26] Query: Describe the partnership between Aristotle and NASA for space exploration.
+Initial Response:
+The partnership between Aristotle and NASA for space exploration is a hypothetical partnership that has not yet occurred.Therefore, there is no information available about the partnership.It is not clear what the partnership would involve or what the goals of the partnership would be.It is also not clear how the partnership would be structured or what the benefits of the partnership would be.It is important to note that Aristotle was a philosopher and scientist from ancient Greece, and NASA is a government agency responsible for space exploration in the United States.Therefore, it is unlikely that there would be a partnership between these two organizations.
+Initial Fact Scores: {'Wikipedia': 0.24, 'ArXiv': 0.31}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:06:52 scheduler.py:161] Input prompt (569 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[27] Query: Explain how Titan’s lakes support human colonies today.
+Initial Response:
+Titan's lakes support human colonies today.
+
+Titan's lakes support human colonies today by providing a source of water and a means of transportation.
+Initial Fact Scores: {'Wikipedia': 0.03, 'ArXiv': 0.38}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:06:57 scheduler.py:161] Input prompt (510 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[28] Query: List the chemical elements discovered on Mercury using the James Webb Telescope.
+Initial Response:
+The James Webb Space Telescope is a telescope that is designed to observe the universe in the infrared region of the electromagnetic spectrum.It is not clear if the James Webb Telescope has discovered any chemical elements on Mercury.
+Initial Fact Scores: {'Wikipedia': 0.57, 'ArXiv': 0.56}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:07:06 scheduler.py:161] Input prompt (273 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[29] Query: Summarize the secret battles of the American Revolution fought in Antarctica.
+Initial Response:
+The American Revolution was a conflict between 1765 and 1783, largely between Great Britain and its Thirteen Colonies which became the United States of America.It was not fought in Antarctica.
+
+The American Revolution was a conflict between 1765 and 1783, largely between Great Britain and its Thirteen Colonies which became the United States of America.The American Revolution was not fought in Antarctica.
+Initial Fact Scores: {'Wikipedia': 0.42, 'ArXiv': 0.09}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:07:18 scheduler.py:161] Input prompt (293 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[30] Query: Explain the establishment of a United Nations colony on Mars in 2023.
+Initial Response:
+The United Nations is an international organization composed of 193 member states.
+(UN) is a global organization that promotes international cooperation and facilitates the resolution of disputes among nations.
+(UN) is a global organization that promotes international cooperation and facilitates the resolution of disputes among nations.The United Nations has established a colony on Mars in 2023 in order to explore the potential of the planet and to create a sustainable human presence on the Red Planet.
+Initial Fact Scores: {'Wikipedia': 0.44, 'ArXiv': 0.48}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:07:44 scheduler.py:161] Input prompt (354 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[31] Query: Describe the oceans found on the surface of Venus and their climate impact.
+Initial Response:
+The oceans found on the surface of Venus and their climate impact.
+Initial Fact Scores: {'Wikipedia': 0.47, 'ArXiv': 0.62}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:07:50 scheduler.py:161] Input prompt (553 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[32] Query: List the official languages of the indigenous civilizations on Jupiter's moons.
+Initial Response:
+The official language of the indigenous civilization on Jupiter's moons is English.However, there are no indigenous civilizations on Jupiter's moons, as they are all uninhabited.Therefore, there are no official languages for any indigenous civilizations on Jupiter's moons.
+Initial Fact Scores: {'Wikipedia': 0.22, 'ArXiv': 0.34}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:08:01 scheduler.py:161] Input prompt (318 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[33] Query: Explain how Shakespeare served as the first ambassador to the Moon.
+Initial Response:
+Shakespeare's plays were performed in front of Elizabeth I, who was the patron of the arts.She was also the first person to see the moon from the earth.Shakespeare's plays were performed in front of Elizabeth I, who was the patron of the arts.She was also the first person to see the moon from the earth.
+Initial Fact Scores: {'Wikipedia': 0.45, 'ArXiv': 0.23}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:08:10 scheduler.py:161] Input prompt (487 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[34] Query: Summarize the creation of artificial intelligence during the medieval period.
+Initial Response:
+The medieval period is a broad term that covers a long time, from the fall of the Roman Empire in the 5th century to the Renaissance in the 16th century.Therefore, it is difficult to summarize the creation of artificial intelligence during the medieval period in a few sentences.Could you please provide more context or clarify your question?
+Initial Fact Scores: {'Wikipedia': 0.4, 'ArXiv': 0.32}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:08:25 scheduler.py:161] Input prompt (470 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+[35] Query: Describe the legal reforms enacted during the extinction of the dinosaurs.
+Initial Response:
+The legal reforms enacted during the extinction of the dinosaurs are not well documented.Therefore, it is not possible to provide a comprehensive and accurate description of the legal reforms enacted during this time.However, it is important to note that the extinction of the dinosaurs is a well-documented event in Earth's history, and there is no evidence to suggest that any legal reforms were enacted during this time.
+Initial Fact Scores: {'Wikipedia': 0.18, 'ArXiv': 0.25}
+Some fact score is low. Triggering retrieval...
+WARNING 04-28 17:08:39 scheduler.py:161] Input prompt (212 tokens) is too long and exceeds the capacity of block_manager
+Regenerated Response:
+
+Delta Scores: {'Wikipedia': 0.0, 'ArXiv': 0.0}
+
+All results written to results/final_outputs.csv

@@ -1,0 +1,15 @@
+# Core LLM + Inference
+vllm==0.2.3
+torch==2.1.2
+transformers==4.38.1
+
+# Validator Dependencies
+spacy==3.8.0
+feedparser==6.0.10
+requests==2.31.0
+
+# Evaluation + Logging
+pandas==2.2.1
+
+# Optional: Needed to download spaCy model
+# Run this manually after setup: python -m spacy download en_core_web_sm
