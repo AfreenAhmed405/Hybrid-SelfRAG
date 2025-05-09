@@ -1,0 +1,10 @@
+[
+  {
+    "query": "Albert Einstein was born in Austria.",
+    "context": "Albert Einstein was born in Ulm, in the Kingdom of Württemberg in the German Empire."
+  },
+  {
+    "query": "The Eiffel Tower is located in London.",
+    "context": "The Eiffel Tower is located in Paris, France."
+  }
+]

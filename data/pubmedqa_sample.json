@@ -1,0 +1,10 @@
+[
+  {
+    "query": "Does regular aerobic exercise improve cardiovascular health?",
+    "context": "Regular aerobic exercise has been shown to improve cardiovascular health and reduce the risk of heart disease."
+  },
+  {
+    "query": "Is penicillin effective against viral infections?",
+    "context": "Penicillin is an antibiotic that is effective against bacterial infections, not viral infections."
+  }
+]
