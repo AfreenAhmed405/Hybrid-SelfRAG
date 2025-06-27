@@ -25,7 +25,7 @@ This multi-layered approach significantly reduces hallucinations and improves al
 
 ## Architecture
 
-![System Architecture](./docs/hybrid_self_rag_architecture.png)
+![System Architecture](sys_arch.png)
 
 1. **Initial Generation**: LLM (GPT-4) generates an initial response.
 2. **Self-Critique**: Produces multiple outputs and selects the most consistent version.
